@@ -79,8 +79,6 @@ app.post('/google', async(req, res) => {
             })
         })
 
-    console.log(googleUser);
-
     Usuario.findOne({ email: googleUser.email }, (err, usuarioDB) => {
         if (err) {
             return res.status(500).json({
@@ -88,8 +86,6 @@ app.post('/google', async(req, res) => {
                 err
             })
         }
-
-        console.log(usuarioDB);
 
         if (usuarioDB) {
             if (!usuarioDB.google) {

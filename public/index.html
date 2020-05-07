@@ -13,6 +13,10 @@
 </head>
 
 <body>
+    <!-- 
+    <img src="http://localhost:3000/imagen/usuarios/5eb0358c22af6057a11866ee-58.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJnb29nbGUiOmZhbHNlLCJfaWQiOiI1ZWIwMzU3YzIyYWY2MDU3YTExODY2ZWQiLCJub21icmUiOiJBbmRlcnNvbiBTw6FuY2hleiBUb2xlZG8iLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsIl9fdiI6MH0sImlhdCI6MTU4ODc3MTI2OCwiZXhwIjoxNTg4OTQ0MDY4fQ.Lrh6j7v_SXTg-hVKlbnnMMh2U9RlBnsqP1Tn-BZEmJU"
+    /> -->
+
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
     <a href="#" onclick="signOut();">Sign out</a>
@@ -34,8 +38,6 @@
             console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
             var id_token = googleUser.getAuthResponse().id_token;
-
-            console.log(id_token)
 
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/google');
